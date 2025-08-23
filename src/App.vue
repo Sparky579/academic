@@ -18,7 +18,7 @@
     <SectionTitle title="About" />
     <section class="section">
       <p>
-        I am a graduate of Southern University of Science and Technology and will join Nanyang Technological University in August 2025 to pursue a research-based master's degree. My research interests focus on Technical HCI, exploring innovative applications of large models, machine learning algorithms, and other interesting technologies in interactive systems.
+        I am a graduate of Southern University of Science and Technology, and I am currently pursuing a research-based Master of Engineering (M.Eng) degree at Nanyang Technological University, supervised by Assistant Professor Wang Yong. My research interests focus on Technical HCI, exploring innovative applications of large language models, machine learning algorithms, and other interesting technologies in interactive systems.
       </p>
     </section>
 
