@@ -49,7 +49,7 @@
 
     <SectionTitle title="Works" />
     <section class="section" id="works">
-      <p><strong>RAGTrace: Visual Analysis for Retrieval-Augmented Chain in RAG Systems</strong> — d3.js, ECharts, Python<br/>
+      <p><strong>RAGTrace: Visual Analysis for Retrieval-Augmented Process in RAG Systems</strong> — d3.js, ECharts, Python<br/>
       Iterative visual analysis system for the retrieval-augmented chain in RAG systems.</p>
 
       <hr class="hr" style="margin:14px 0;"/>
