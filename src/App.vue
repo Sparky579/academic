@@ -70,6 +70,12 @@
       <p><strong>{{ $t('works.qqbot.title') }}</strong> — {{ $t('works.qqbot.tech') }}<br/>
       {{ $t('works.qqbot.desc') }}
       <a href="https://github.com/Sparky579/EDT_Mirai_Plugin" target="_blank" rel="noreferrer">{{ $t('works.qqbot.link') }}</a></p>
+
+      <hr class="hr" style="margin:14px 0;"/>
+
+      <p><strong>{{ $t('works.pikapark.title') }}</strong> — {{ $t('works.pikapark.tech') }}<br/>
+      {{ $t('works.pikapark.desc') }}
+      <a href="https://forum.sparky.qzz.io" target="_blank" rel="noreferrer">{{ $t('works.pikapark.link') }}</a></p>
     </section>
 
     <SectionTitle :title="$t('nav.honors')" />
