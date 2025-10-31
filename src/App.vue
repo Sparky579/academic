@@ -10,7 +10,7 @@
         <div class="links">
           <a href="https://github.com/Sparky579" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://orcid.org/0009-0001-2474-9230" target="_blank" rel="noreferrer">ORCID</a>
-          <a href="mailto:{{ $t('header.email') }}">{{ $t('header.email') }}</a>
+          <a :href="'mailto:' + email">{{ email }}</a>
         </div>
       </div>
     </section>
@@ -70,12 +70,6 @@
       <p><strong>{{ $t('works.qqbot.title') }}</strong> — {{ $t('works.qqbot.tech') }}<br/>
       {{ $t('works.qqbot.desc') }}
       <a href="https://github.com/Sparky579/EDT_Mirai_Plugin" target="_blank" rel="noreferrer">{{ $t('works.qqbot.link') }}</a></p>
-
-      <hr class="hr" style="margin:14px 0;"/>
-
-      <p><strong>{{ $t('works.pikapark.title') }}</strong> — {{ $t('works.pikapark.tech') }}<br/>
-      {{ $t('works.pikapark.desc') }}
-      <a href="https://forum.sparky.qzz.io" target="_blank" rel="noreferrer">{{ $t('works.pikapark.link') }}</a></p>
     </section>
 
     <SectionTitle :title="$t('nav.honors')" />
@@ -126,13 +120,14 @@ const { t, tm } = useI18n()
 // 使用 tm 获取数组类型的文案，避免 t 返回字符串导致逐字渲染
 const experienceProjects = computed(() => tm('experience.projects') || [])
 const honorsList = computed(() => tm('honors') || [])
+const email = computed(() => `${t('header.email.user')}@${t('header.email.domain')}`)
 </script>
 
 <style scoped>
 .manifesto {
   margin-top: 14px;
   padding: 14px 16px;
-  font-family: 'Source Serif Pro', Georgia, serif;
+  font-family: 'Microsoft YaHei', '微软雅黑', 'Source Serif Pro', Georgia, serif;
   font-size: 1.1rem;
   font-style: italic;
   line-height: 1.65;

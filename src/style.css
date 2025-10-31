@@ -22,7 +22,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: Inter, "Microsoft YaHei", "微软雅黑", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   line-height: 1.6;
 }
 .container {
@@ -44,7 +44,7 @@ a:hover { text-decoration: underline; }
 .avatar {
   width: 120px; height: 150px; border-radius: 8px; object-fit: cover; border: 1px solid var(--border);
 }
-.name { font-family: "Source Serif Pro", Georgia, serif; font-size: 32px; margin: 0; }
+.name { font-family: "Source Serif Pro", "Microsoft YaHei", "微软雅黑", Georgia, serif; font-size: 32px; margin: 0; }
 .title { margin: 6px 0 0; color: var(--muted); }
 .links { margin-top: 10px; display: flex; gap: 14px; flex-wrap: wrap; }
 

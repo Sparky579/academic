@@ -23,7 +23,10 @@ const messages = {
       name: 'Sizhe Cheng',
       title: 'M.Eng. in Computer Science (in progress)',
       university: 'Nanyang Technological University',
-      email: 'sizhe003@e.ntu.edu.sg'
+      email: {
+        user: 'sizhe003',
+        domain: 'e.ntu.edu.sg'
+      }
     },
     about: {
       intro: 'I am a graduate of Southern University of Science and Technology and joined Nanyang Technological University in August 2025 to pursue a research-based master\'s degree. My research interests focus on Technical HCI, exploring innovative applications of Generative AI, and other interesting technologies in interactive systems.',
@@ -123,7 +126,10 @@ const messages = {
       name: '程司哲',
       title: '计算机科学硕士在读',
       university: '南洋理工大学',
-      email: 'sizhe003@e.ntu.edu.sg'
+      email: {
+        user: 'sizhe003',
+        domain: 'e.ntu.edu.sg'
+      }
     },
     about: {
       intro: '我是南方科技大学毕业生，于2025年8月加入南洋理工大学攻读研究型硕士学位。我的研究兴趣集中在技术人机交互，探索生成式AI等有趣技术在交互系统中的创新应用。',
