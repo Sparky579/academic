@@ -5,98 +5,103 @@
     <section class="header" id="about">
       <img class="avatar" src="/profile.jpg" alt="Profile photo" />
       <div>
-        <h1 class="name">Sizhe Cheng</h1>
-        <p class="title">M.Eng. in Computer Science (in progress) <br/> Nanyang Technological University</p>
+        <h1 class="name">{{ $t('header.name') }}</h1>
+        <p class="title">{{ $t('header.title') }} <br/> {{ $t('header.university') }}</p>
         <div class="links">
           <a href="https://github.com/Sparky579" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://orcid.org/0009-0001-2474-9230" target="_blank" rel="noreferrer">ORCID</a>
-          <a href="mailto:sizhe003@e.ntu.edu.sg">sizhe003@e.ntu.edu.sg</a>
+          <a href="mailto:{{ $t('header.email') }}">{{ $t('header.email') }}</a>
         </div>
       </div>
     </section>
 
-    <SectionTitle title="About" />
+    <SectionTitle :title="$t('nav.about')" />
     <section class="section">
       <p>
-        I am a graduate of Southern University of Science and Technology and will join Nanyang Technological University in August 2025 to pursue a research-based master's degree. My research interests focus on Technical HCI, exploring innovative applications of large models, machine learning algorithms, and other interesting technologies in interactive systems.
+        {{ $t('about.intro') }}
       </p>
+      <p class="manifesto">{{ $t('about.manifesto') }}</p>
     </section>
 
-    <SectionTitle title="Education" />
+    <SectionTitle :title="$t('nav.education')" />
     <section class="section" id="education">
-      <p><strong>2025–Present</strong> — M.Eng. in Computer Science, Nanyang Technological University</p>
-      <p><strong>2021–2025</strong> — B.Eng. in Computer Science, Southern University of Science and Technology</p>
-      <p style="color: var(--muted); margin-top:6px;">GPA: 3.73/4.0 · Turing Class Honor Graduate</p>
+      <p>{{ $t('education.current') }}</p>
+      <p>{{ $t('education.previous') }}</p>
+      <p style="color: var(--muted); margin-top:6px;">{{ $t('education.gpa') }}</p>
     </section>
 
-    <SectionTitle title="Experience" />
+    <SectionTitle :title="$t('nav.experience')" />
     <section class="section" id="experience">
-      <p><strong>2024</strong> — Visiting Student, Zhejiang University</p>
-      <p style="color: var(--muted);">College of Computer Science; visual analytics and multi-modal large models</p>
+      <p>{{ $t('experience.visiting') }}</p>
+      <p style="color: var(--muted);">{{ $t('experience.details') }}</p>
       <ul style="margin:8px 0 0 18px;">
-        <li>Participated in the KLMVis research project</li>
-        <li>Worked on multi-modal large model distillation</li>
+        <li v-for="(project, index) in experienceProjects" :key="index">{{ project }}</li>
       </ul>
     </section>
 
-    <SectionTitle title="Skills" />
+    <SectionTitle :title="$t('nav.skills')" />
     <section class="section" id="skills">
-      <p><strong>Programming Languages</strong>: C++, JavaScript, Python, Java</p>
-      <p><strong>Machine Learning</strong>: PyTorch, Scikit-learn, OpenCV, TensorFlow</p>
-      <p><strong>Web Development</strong>: Vue.js, React, Node.js, d3.js, ECharts</p>
-      <p><strong>Design</strong>: Figma, Adobe Photoshop</p>
+      <p><strong>{{ $t('skills.languages') }}</strong>: C++, JavaScript, Python, Java</p>
+      <p><strong>{{ $t('skills.ml') }}</strong>: PyTorch, Scikit-learn, OpenCV, TensorFlow</p>
+      <p><strong>{{ $t('skills.web') }}</strong>: Vue.js, React, Node.js, d3.js, ECharts</p>
+      <p><strong>{{ $t('skills.design') }}</strong>: Figma, Adobe Photoshop</p>
     </section>
 
-    <SectionTitle title="Works" />
+    <SectionTitle :title="$t('nav.works')" />
     <section class="section" id="works">
-      <p><strong>RAGTrace: Visual Analysis for Retrieval-Augmented Chain in RAG Systems</strong> — d3.js, ECharts, Python<br/>
-      Iterative visual analysis system for the retrieval-augmented chain in RAG systems.</p>
+      <p><strong>{{ $t('works.ragtrace.title') }}</strong> — {{ $t('works.ragtrace.tech') }}<br/>
+      {{ $t('works.ragtrace.desc') }}
+      <a href="https://github.com/VIS-SUSTech/RAGTrace" target="_blank" rel="noreferrer">{{ $t('works.ragtrace.link') }}</a> |
+      <a href="https://deepwiki.com/VIS-SUSTech/RAGTrace" target="_blank" rel="noreferrer">{{ $t('works.ragtrace.wiki') }}</a></p>
 
       <hr class="hr" style="margin:14px 0;"/>
 
-      <p><strong>Machine Vision-based Classroom Quality Analysis</strong> — YOLOv8, Flask, VLM<br/>
-      System to analyze classroom behavior and generate reports.</p>
+      <p><strong>{{ $t('works.classroom.title') }}</strong> — {{ $t('works.classroom.tech') }}<br/>
+      {{ $t('works.classroom.desc') }}</p>
 
       <hr class="hr" style="margin:14px 0;"/>
 
-      <p><strong>Nimmt 7 AI Battle System</strong> — Vue.js, Flask, SQLite<br/>
-      Board game AI with multiple levels (random, greedy, heuristic, MCTS variants).
-      <a href="https://github.com/Sparky579/Nimmt" target="_blank" rel="noreferrer">Project</a></p>
+      <p><strong>{{ $t('works.nimmt.title') }}</strong> — {{ $t('works.nimmt.tech') }}<br/>
+      {{ $t('works.nimmt.desc') }}
+      <a href="https://github.com/Sparky579/Nimmt" target="_blank" rel="noreferrer">{{ $t('works.nimmt.link') }}</a></p>
 
       <hr class="hr" style="margin:14px 0;"/>
 
-      <p><strong>QQ Group Entertainment Robot Based on Mirai</strong> — Java, Mirai, OpenAI<br/>
-      Automated replies and entertainment features for QQ groups.
-      <a href="https://github.com/Sparky579/EDT_Mirai_Plugin" target="_blank" rel="noreferrer">Project</a></p>
+      <p><strong>{{ $t('works.qqbot.title') }}</strong> — {{ $t('works.qqbot.tech') }}<br/>
+      {{ $t('works.qqbot.desc') }}
+      <a href="https://github.com/Sparky579/EDT_Mirai_Plugin" target="_blank" rel="noreferrer">{{ $t('works.qqbot.link') }}</a></p>
+
+      <hr class="hr" style="margin:14px 0;"/>
+
+      <p><strong>{{ $t('works.pikapark.title') }}</strong> — {{ $t('works.pikapark.tech') }}<br/>
+      {{ $t('works.pikapark.desc') }}
+      <a href="https://forum.sparky.qzz.io" target="_blank" rel="noreferrer">{{ $t('works.pikapark.link') }}</a></p>
     </section>
 
-    <SectionTitle title="Honors" />
+    <SectionTitle :title="$t('nav.honors')" />
     <section class="section" id="honors">
       <ul style="margin:0 0 0 18px;">
-        <li>ACM-ICPC 2023 Asia Regional Contest Silver Medal</li>
-        <li>Shenzhen Bridge Championship Pairs Champion</li>
-        <li>Outstanding Graduate of the Department of Computer Science, SUSTech</li>
-        <li>Outstanding Undergraduate Thesis, SUSTech</li>
+        <li v-for="(honor, index) in honorsList" :key="index">{{ honor }}</li>
       </ul>
     </section>
 
-    <SectionTitle title="Publications" />
+    <SectionTitle :title="$t('nav.publications')" />
     <section class="section" id="publications">
       <ul class="pub-list">
         <PublicationItem
-          title="KLMVis: Visual Analysis System for Retrieval-Augmented Language Models"
-          authors="Jian Shen, Minfeng Zhu, Yuxin Ma, <strong>Sizhe Cheng</strong>, Zhizhang Chen, Danfang Yan, Wei Chen"
-          venue="Journal of Computer-Aided Design and Computer Graphics (2024)"
+          :title="$t('publications.klmvis.title')"
+          :authors="$t('publications.klmvis.authors')"
+          :venue="$t('publications.klmvis.venue')"
           :links="[
-            { label: 'PDF', href: 'https://www.jcad.cn/cn/article/pdf/preview/10.3724/SP.J.1089.2024-00393.pdf' }
+            { label: $t('publications.klmvis.links.pdf'), href: 'https://www.jcad.cn/cn/article/pdf/preview/10.3724/SP.J.1089.2024-00393.pdf' }
           ]"
         />
         <PublicationItem
-          title="RAGTrace: Understanding and Refining Retrieval-Generation Dynamics in Retrieval-Augmented Generation"
-          authors="<strong>Sizhe Cheng*</strong>, Jiaping Li*, Huanchen Wang, Yuxin Ma"
-          venue="UIST (2025)"
+          :title="$t('publications.ragtrace.title')"
+          :authors="$t('publications.ragtrace.authors')"
+          :venue="$t('publications.ragtrace.venue')"
           :links="[
-            { label: 'arXiv', href: 'https://arxiv.org/abs/2508.06056' }
+            { label: $t('publications.ragtrace.links.acm'), href: 'https://dl.acm.org/doi/10.1145/3746059.3747741' }
           ]"
         />
       </ul>
@@ -113,4 +118,32 @@ import HeaderNav from './components/HeaderNav.vue'
 import SectionTitle from './components/SectionTitle.vue'
 import PublicationItem from './components/PublicationItem.vue'
 import FooterSimple from './components/FooterSimple.vue'
+import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
+
+const { t, tm } = useI18n()
+
+// 使用 tm 获取数组类型的文案，避免 t 返回字符串导致逐字渲染
+const experienceProjects = computed(() => tm('experience.projects') || [])
+const honorsList = computed(() => tm('honors') || [])
 </script>
+
+<style scoped>
+.manifesto {
+  margin-top: 14px;
+  padding: 14px 16px;
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.65;
+  border-left: 4px solid var(--muted);
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .manifesto {
+    background: rgba(255, 255, 255, 0.06);
+  }
+}
+</style>
